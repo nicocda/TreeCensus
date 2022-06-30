@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TreeCensus.MainPage"
+             Title="Censo">
+
+    <ScrollView>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <StackLayout Margin="0, 1" Orientation="Horizontal">
+                <StackLayout>
+                    <Label Text="Calle" Font="Bold,15"/>
+                    <Entry x:Name="Calle" WidthRequest="150"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Orientacion" Font="Bold,15"/>
+                    <Entry x:Name="Orientacion" WidthRequest="150"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="0, 1" Orientation="Vertical">
+                <StackLayout>
+                    <Label Text="Esquina" Font="Bold,15"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="Esquina1" WidthRequest="150" />
+                    <Label Text=" y " VerticalOptions="Center"/>
+                    <Entry x:Name="Esquina2" WidthRequest="150" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="0, 1" Orientation="Horizontal">
+                <StackLayout>
+                    <Label Text="Altura" Font="Bold,15"/>
+                    <Entry x:Name="AlturaCalle" WidthRequest="75" Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Par/Impar" Font="Bold,15" VerticalOptions="Center"/>
+                    <Switch x:Name="ParImpar" IsToggled="False" Toggled="ParImpar_Toggled"/>
+                </StackLayout>
+                <StackLayout Margin="0, 1" HorizontalOptions="End">
+                    <Label Text="Numero" Font="Bold,15"/>
+                    <Entry x:Name="Numero" WidthRequest="75" Keyboard="Numeric"/>
+                </StackLayout>
+            </StackLayout>
+           
+            <StackLayout Margin="0, 1" Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Vereda Construida" Font="Bold,15" VerticalOptions="Center"/>
+                    <Switch IsToggled="False" Toggled="VeredaConstruida_Toggled"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="MtsVereda" WidthRequest="125" />
+                    <Label Text="Mts" VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="0, 1" Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Cordon Cuneta" Font="Bold,15" VerticalOptions="Center"/>
+                    <Switch IsToggled="False" Toggled="VeredaConstruida_Toggled"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Línea Media Tensión" Font="Bold,15" VerticalOptions="Center"/>
+                    <Switch IsToggled="False" Toggled="VeredaConstruida_Toggled"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="0, 1" Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Preensamblado" Font="Bold,15" VerticalOptions="Center"/>
+                    <Switch IsToggled="False" Toggled="VeredaConstruida_Toggled"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Inter. con Alumbrado" Font="Bold,15" VerticalOptions="Center"/>
+                    <Switch IsToggled="False" Toggled="VeredaConstruida_Toggled"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="0, 1" Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Especie" Font="Bold,15" VerticalOptions="Center"/>
+                        <Entry x:Name="Especie" WidthRequest="75"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="RUD     " Font="Bold,15" VerticalOptions="Center"/>
+                        <Entry x:Name="Rud" WidthRequest="75"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="DLME   " Font="Bold,15" VerticalOptions="Center"/>
+                        <Entry x:Name="Dlme" WidthRequest="75"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout VerticalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="Maa" WidthRequest="75" Keyboard="Numeric"/>
+                        <Label Text="M a A   " Font="Bold,15" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="Aaa" WidthRequest="75" Keyboard="Numeric"/>
+                        <Label Text="A a A    " Font="Bold,15" VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Lugar Disponible" Font="Bold, 15" VerticalOptions="Center"/>
+                    <Switch IsToggled="False" Toggled="LugarDisponible_Toggled"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" IsVisible="{Binding LugarDisponible}">
+                        <Label Text="Cazuela" Font="Bold, 15" VerticalOptions="Center" IsVisible="{Binding LugarDisponible}"/>
+                        <Switch IsToggled="False" Toggled="LugarDisponible_Toggled" IsVisible="{Binding LugarDisponible}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" IsVisible="{Binding LugarDisponible}">
+                        <Label Text="V. Jardin" Font="Bold, 15" VerticalOptions="Center" IsVisible="{Binding LugarDisponible}"/>
+                        <Switch IsToggled="False" Toggled="LugarDisponible_Toggled" IsVisible="{Binding LugarDisponible}" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Circunferencia del Tronco" Font="Bold, 15" VerticalOptions="Center"/>
+                    <Switch IsToggled="False" Toggled="LugarDisponible_Toggled"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
