@@ -18,6 +18,14 @@ namespace TreeCensus
             set { _LugarDisponible = value; OnPropertyChanged(); }
         }
 
+        public List<PickerElement> Alturas = new List<PickerElement> {
+            new PickerElement(){ Id = 6, Name = "6" },
+            new PickerElement(){ Id = 12, Name = "12" },
+            new PickerElement(){ Id = 18, Name = "18" },
+            new PickerElement(){ Id = 19, Name = "MAS" },
+            };
+
+
         public MainPage()
         {
             InitializeComponent();
@@ -43,6 +51,12 @@ namespace TreeCensus
                 censo.Cazuela = false;
                 censo.Jardin = false;
             }
+        }
+
+        public class PickerElement
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
         }
     }
 }

@@ -114,7 +114,13 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Circunferencia del Tronco" Font="Bold, 15" VerticalOptions="Center"/>
-                    <Switch IsToggled="False" Toggled="LugarDisponible_Toggled"/>
+                    <Entry x:Name="CircunferenciaTronco" WidthRequest="125" />
+                    <Label Text="Mts" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Altura" Font="Bold, 15" VerticalOptions="Center"/>
+                    <Picker x:Name="Altura"  ItemsSource="{Binding Alturas}" ItemDisplayBinding="{Binding Name}"/>
+
                 </StackLayout>
             </StackLayout>
         </StackLayout>
